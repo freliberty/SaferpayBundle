@@ -17,10 +17,10 @@
 
         <service
             id="payment.saferpay.httpclient.client"
-            factory-service="payment.saferpay.httpclient.factory"
-            factory-method="createClient"
             class="%payment.saferpay.httpclient.factory.class%"
-        ></service>
+            >
+            <factory class="%payment.saferpay.httpclient.factory.class%" method="createClient" />
+        </service>
         <service id="payment.saferpay.httpclient.factory" class="%payment.saferpay.httpclient.factory.class%" />
 
         <service id="payment.saferpay" class="%payment.saferpay.saferpay.class%">
